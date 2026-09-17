@@ -1,0 +1,15 @@
+<ActionBar title="Detalle" class="action-bar"></ActionBar>
+
+<StackLayout class="page__content p-16" *ngIf="producto">
+  <Label [text]="producto.nombre" class="producto-detalle-titulo" textWrap="true"></Label>
+  <Label [text]="producto.categoria" class="producto-categoria"></Label>
+  <Label [text]="'Precio: L. ' + producto.precio" class="producto-precio m-t-10"></Label>
+
+  <!-- Solo tiene contenido cuando la app corre en Android -->
+  <Label
+    *ngIf="mensajePlataforma"
+    [text]="mensajePlataforma"
+    class="mensaje-android m-t-20"
+    textWrap="true"
+  ></Label>
+</StackLayout>

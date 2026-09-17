@@ -1,0 +1,25 @@
+<ActionBar class="action-bar">
+  <NavigationButton visibility="hidden"></NavigationButton>
+  <GridLayout columns="50, *">
+    <Label class="action-bar-title" text="Productos" colSpan="2"></Label>
+    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+  </GridLayout>
+</ActionBar>
+
+<ScrollView class="page__content">
+  <StackLayout class="p-16">
+    <!-- Requisito: uso de *ngFor -->
+    <GridLayout
+      *ngFor="let producto of productos"
+      columns="*, auto"
+      class="producto-item"
+      (tap)="verDetalle(producto)"
+    >
+      <StackLayout col="0">
+        <Label [text]="producto.nombre" class="producto-nombre"></Label>
+        <Label [text]="producto.categoria" class="producto-categoria"></Label>
+      </StackLayout>
+      <Label col="1" [text]="'L. ' + producto.precio" class="producto-precio"></Label>
+    </GridLayout>
+  </StackLayout>
+</ScrollView>

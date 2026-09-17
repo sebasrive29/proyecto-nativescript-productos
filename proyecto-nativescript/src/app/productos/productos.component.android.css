@@ -1,0 +1,10 @@
+/* Este archivo SOLO es interpretado en Android, gracias al sufijo .android antes de .css */
+.producto-item {
+  padding: 14;
+  elevation: 2;
+}
+
+.producto-nombre {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16;
+}

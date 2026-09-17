@@ -1,0 +1,9 @@
+/* Este archivo SOLO es interpretado en iOS, gracias al sufijo .ios antes de .css */
+.producto-item {
+  padding: 10;
+}
+
+.producto-nombre {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 15;
+}
